@@ -1,0 +1,21 @@
+<div class="container">
+        <h2>The Garden</h2>      
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let product of products">
+                <th width = "100"><span title="This plant is #{{product.id}}">{{product.name}}</span></th>
+                <th width = "100"><span title="{{product.price | currency}} is a steal">{{product.price | currency}}</span></th>
+                <th width = "300"><span title="This plant is guarenteed to be a plant.">{{product.description}}</span></th>
+                <th><span title="This image is definitely not just a google search"><img src={{product.image}} alt="image"></span></th>
+            </tr>
+            </tbody>
+        </table>
+    </div>

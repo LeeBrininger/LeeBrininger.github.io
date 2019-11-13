@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ProductDisplayComponent } from './product-display/product-display.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { SiteRoutingModule } from './site-routing.module';
+import { HeaderBarComponent } from './header-bar/header-bar.component';
+import { BotanyDisplayComponent } from './botany-display/botany-display.component';
 
 
 
@@ -14,11 +17,14 @@ import { NavigationComponent } from './navigation/navigation.component';
     AppComponent,
     HomePageComponent,
     ProductDisplayComponent,
-    NavigationComponent
+    NavigationComponent,
+    HeaderBarComponent,
+    BotanyDisplayComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SiteRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
