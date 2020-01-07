@@ -1,6 +1,13 @@
-<nav>
-    <a routerLink="/home">Home</a>
-    <a class="tab" routerLink="/maps">Cartography</a>
-    <a class="tab" routerLink="/plants">Greenhouse</a>
+<app-header-bar></app-header-bar>
+<nav class="navbar navbar-expand-sm justify-content-right" id="navcol">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li class="active"><a routerLink="/home">Home</a></li>
+            <li><a class="tab" routerLink="/maps">Cartography</a></li>
+            <li><a class="tab" routerLink="/plants">Greenhouse</a></li>
+            <li><a class="tab" routerLink="/archive">Archived</a></li>
+            <li><a class="tab" routerLink="/login">Log In/Sign Up</a></li>
+        </ul>
+    </div>
 </nav>
 <router-outlet></router-outlet>

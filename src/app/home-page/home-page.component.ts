@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
-
+import { UserService } from '../user.service';
 
 
 @Component({
@@ -11,15 +11,19 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomePageComponent implements OnInit {
 
-  
+  users: String;
 
   sendMapStore(){
     this.router.navigate(['/', 'app-map']);
   }
 
-  constructor(private route : ActivatedRoute, private router : Router) { }
+  constructor(private route : ActivatedRoute, private router : Router, private userService: UserService) { }
 
   ngOnInit() {
+    this.userService.getUsers()
+    .subscribe( data => {
+      this.users = data[2].name + " ok";
+    });
   }
 
 }

@@ -1,20 +1,24 @@
-<div class="container">
-        <h2>The Garden</h2>      
-        <table class="table table-striped">
+<div class="container" id="pl">
+        <h2>The Garden {{plantsD}}</h2>      
+        <table class="table table-hover">
             <thead>
             <tr>
                 <th>Name</th>
                 <th>Price</th>
                 <th>Description</th>
                 <th>Image</th>
+                <th>Amount in Stock</th>
             </tr>
             </thead>
             <tbody>
             <tr *ngFor="let product of products">
-                <th width = "100"><span title="This plant is #{{product.id}}">{{product.name}}</span></th>
+                <th width = "100"><span title="This plant is #{{product.id}}">{{product.plantname}}</span></th>
                 <th width = "100"><span title="{{product.price | currency}} is a steal">{{product.price | currency}}</span></th>
                 <th width = "300"><span title="This plant is guarenteed to be a plant.">{{product.description}}</span></th>
-                <th><span title="This image is definitely not just a google search"><img src={{product.image}} alt="image"></span></th>
+                <th><span title="This image is definitely not just a google search"><img src={{product.image}} class="img-thumbnail" alt="image"></span></th>
+                <th width = "30"><span title="You should buy this many of them">{{product.quantity}}</span></th>
+                <button (click)="purchaseP(product.id)">Buy Now!</button>
+                <button (click)="addP(product.id)">*Admin only* Add Stock</button>
             </tr>
             </tbody>
         </table>
