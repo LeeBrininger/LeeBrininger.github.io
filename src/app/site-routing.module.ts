@@ -15,7 +15,9 @@ const routes: Routes = [
   {path: 'plants', component: BotanyDisplayComponent},
   {path: 'archive', component: ArchivedComponent },
   {path: 'user', component: User },
-  {path: 'login', component: LoginComponent }
+  {path: 'login', component: LoginComponent },
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: '**', redirectTo: 'home', pathMatch: 'full'}
 ]
 
 @NgModule({
