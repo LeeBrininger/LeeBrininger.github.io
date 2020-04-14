@@ -42,7 +42,7 @@ create table Users(
 );
 
 insert into user VALUES (1, 'creator', 12345, 'admin');
-insert into user VALUES (2, 'Shane', 12345, 'admin');
+insert into user VALUES (2, 'Emily', 12345, 'admin');
 insert into user VALUES (3, 'TreasureBoy', 12345, 'customer');
 insert into user VALUES (4, 'PlantLover', 12345, 'customer');
 

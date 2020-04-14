@@ -1,13 +1,11 @@
-body{
-    background-color: black;
-}
 
 table{
     background-color: forestgreen;
 }
 
 img{
-    height: 30%;
+    height: auto;
+    max-width: 70%;
 }
 
 #pl{
