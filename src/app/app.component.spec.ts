@@ -1,6 +1,12 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { RouterModule } from '@angular/router';
+import { ArchivedComponent } from './archived/archived.component';
+import { UserService } from './user.service';
+import { HomePageComponent } from './home-page/home-page.component';
+import { BotanyDisplayComponent } from './botany-display/botany-display.component';
+
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
